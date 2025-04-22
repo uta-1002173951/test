@@ -12,9 +12,9 @@ MySQL Connector for Python (pip install mysql-connector-python)
 Clone or download this repository to your local machine.
 
 Install the required Python packages:
-'''
-pip install flask mysql-connector-python
-'''
+
+> pip install flask mysql-connector-python
+
 Ensure MySQL is running (e.g., via XAMPP).
 
 
@@ -23,9 +23,9 @@ Ensure MySQL is running (e.g., via XAMPP).
 Start your MySQL server (e.g., through XAMPP).
 
 Create the database and table using the following SQL commands:
-'''
-CREATE DATABASE OrganicMarket;
-USE OrganicMarket;
+
+> CREATE DATABASE OrganicMarket;
+> USE OrganicMarket;
 
 CREATE TABLE products (
 id INT AUTO_INCREMENT PRIMARY KEY,
