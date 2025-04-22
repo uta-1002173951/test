@@ -24,8 +24,8 @@ Start your MySQL server (e.g., through XAMPP).
 
 Create the database and table using the following SQL commands:
 ```
-> CREATE DATABASE OrganicMarket;
-> USE OrganicMarket;
+CREATE DATABASE OrganicMarket;
+USE OrganicMarket;
 
 CREATE TABLE products (
 id INT AUTO_INCREMENT PRIMARY KEY,
