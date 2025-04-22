@@ -119,20 +119,20 @@ Removes related data from store_item, vendor_item, item, and vendor tables (if t
 > 
 > List All Products: Displays all products in the store.
 
-File Structure
+### File Structure
 
 app.py: Main Flask application with routes for adding, viewing, deleting products, and generating reports.
 templates/index.html: Frontend HTML file with a form to add products, a product list, and links to reports.
 templates/*.html: Additional templates for rendering reports (products.html, top_revenue.html, etc.).
 
-Notes
+### Notes
 
 The application uses Flask for the backend and MySQL for the database.
 The frontend uses basic HTML and JavaScript for interacting with the Flask API.
 Ensure your MySQL server is running before starting the app.
 The database configuration in app.py assumes a local MySQL setup with the default XAMPP credentials (root, no password).
 
-Troubleshooting
+### Troubleshooting
 
 If you encounter a database connection error, verify your MySQL credentials in db_config and ensure the server is running.
 Ensure the required tables are created in the database before running the app.
