@@ -1,28 +1,29 @@
 # OrganicMarket Product Management
 This project is a Flask-based web application for managing products in the OrganicMarket database. It allows users to add, view, and delete products, as well as generate various reports on sales, revenue, and customer loyalty.
-Prerequisites
 
+### Prerequisites
 Python 3.x
 MySQL (e.g., XAMPP for local development)
 Flask (pip install flask)
 MySQL Connector for Python (pip install mysql-connector-python)
 
-Installation
+### Installation
 
 Clone or download this repository to your local machine.
 
 Install the required Python packages:
+'''
 pip install flask mysql-connector-python
-
-
+'''
 Ensure MySQL is running (e.g., via XAMPP).
 
 
-Database Setup
+### Database Setup
 
 Start your MySQL server (e.g., through XAMPP).
 
 Create the database and table using the following SQL commands:
+'''
 CREATE DATABASE OrganicMarket;
 USE OrganicMarket;
 
@@ -61,8 +62,9 @@ StockCount INT,
 PRIMARY KEY (sId, iId),
 FOREIGN KEY (iId) REFERENCES item(iId)
 );
-
+'''
 -- Additional tables for reports (example structure)
+'''
 CREATE TABLE ItemSalesSummary (
 Iname VARCHAR(100),
 TotalRevenue DECIMAL(10, 2),
@@ -73,20 +75,21 @@ CREATE TABLE TopLoyalCustomers (
 Cname VARCHAR(100),
 LoyaltyScore DECIMAL(3, 1)
 );
+'''
+
+Update the **db_config** in **app.py** with your MySQL credentials if needed (default uses root with no password).
 
 
-Update the db_config in app.py with your MySQL credentials if needed (default uses root with no password).
-
-
-Running the Application
+### Running the Application
 
 Navigate to the project directory in your terminal.
 
 Run the Flask app:
+'''
 python app.py
+'''
 
-
-Open your browser and go to http://127.0.0.1:5000/ to access the application.
+Open your browser and go to **http://127.0.0.1:5000/** to access the application.
 
 
 Features
