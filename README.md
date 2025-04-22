@@ -1,4 +1,4 @@
-##### OrganicMarket Product Management
+# OrganicMarket Product Management
 This project is a Flask-based web application for managing products in the OrganicMarket database. It allows users to add, view, and delete products, as well as generate various reports on sales, revenue, and customer loyalty.
 Prerequisites
 
