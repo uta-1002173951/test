@@ -92,8 +92,8 @@ python app.py
 Open your browser and go to **http://127.0.0.1:5000/** to access the application.
 
 
-Features
-1. Add Product
+### Features
+1. **Add Product**
 Input fields for product name, price, and quantity.
 
 
@@ -106,7 +106,7 @@ Input fields for product name, price, and quantity.
 Currently supports adding "Almond Nuts" (hardcoded for specific requirements: iId=101, vId=201, storeId=1).
 Inserts data into vendor, item, vendor_item, and store_item tables.
 
-2. View Products
+2. **View Products**
 
 
 
@@ -120,7 +120,7 @@ Inserts data into vendor, item, vendor_item, and store_item tables.
 Displays a list of products with their name, price, and quantity.
 Fetches data from the database and renders it on the frontend.
 
-3. Delete Product
+3. **Delete Product**
 
 
 
@@ -139,7 +139,7 @@ Fetches data from the database and renders it on the frontend.
 Allows deletion of a product by its ID.
 Removes related data from store_item, vendor_item, item, and vendor tables (if the vendor has no other items).
 
-4. Reports
+4. **Reports**
 
 
 
@@ -153,12 +153,12 @@ Removes related data from store_item, vendor_item, item, and vendor tables (if t
 
 
 
-Top 3 Revenue-Generating Items: Lists the top 3 items by revenue.
-Items Sold More Than 50 Units: Shows items with sales exceeding 50 units.
-Top Loyal Customer: Displays the customer with the highest loyalty score.
-Loyal Customers (Score 4–5): Lists customers with loyalty scores between 4 and 5.
-Total Revenue: Shows the total revenue from all sales.
-List All Products: Displays all products in the store.
+> Top 3 Revenue-Generating Items: Lists the top 3 items by revenue.
+> Items Sold More Than 50 Units: Shows items with sales exceeding 50 units.
+> Top Loyal Customer: Displays the customer with the highest loyalty score.
+> Loyal Customers (Score 4–5): Lists customers with loyalty scores between 4 and 5.
+> Total Revenue: Shows the total revenue from all sales.
+> List All Products: Displays all products in the store.
 
 File Structure
 
