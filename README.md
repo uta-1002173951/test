@@ -12,9 +12,9 @@ MySQL Connector for Python (pip install mysql-connector-python)
 Clone or download this repository to your local machine.
 
 Install the required Python packages:
-
-> pip install flask mysql-connector-python
-
+```
+pip install flask mysql-connector-python
+```
 Ensure MySQL is running (e.g., via XAMPP).
 
 
@@ -23,58 +23,59 @@ Ensure MySQL is running (e.g., via XAMPP).
 Start your MySQL server (e.g., through XAMPP).
 
 Create the database and table using the following SQL commands:
-
+```
 > CREATE DATABASE OrganicMarket;
 > USE OrganicMarket;
 
-> CREATE TABLE products (
-> id INT AUTO_INCREMENT PRIMARY KEY,
-> name VARCHAR(100) NOT NULL,
-> price DECIMAL(10, 2) NOT NULL,
-> quantity INT NOT NULL
-> );
+CREATE TABLE products (
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100) NOT NULL,
+price DECIMAL(10, 2) NOT NULL,
+quantity INT NOT NULL
+);
 
-> CREATE TABLE vendor (
-> vId INT PRIMARY KEY,
-> Vname VARCHAR(100),
-> Address VARCHAR(255)
-> );
+CREATE TABLE vendor (
+vId INT PRIMARY KEY,
+Vname VARCHAR(100),
+Address VARCHAR(255)
+);
 
-> CREATE TABLE item (
-> iId INT PRIMARY KEY,
-> Iname VARCHAR(100),
-> Sprice DECIMAL(10, 2),
-> Category VARCHAR(50)
-> );
+CREATE TABLE item (
+iId INT PRIMARY KEY,
+Iname VARCHAR(100),
+Sprice DECIMAL(10, 2),
+Category VARCHAR(50)
+);
 
-> CREATE TABLE vendor_item (
-> vId INT,
-> iId INT,
-> PRIMARY KEY (vId, iId),
-> FOREIGN KEY (vId) REFERENCES vendor(vId),
-> FOREIGN KEY (iId) REFERENCES item(iId)
-> );
+CREATE TABLE vendor_item (
+vId INT,
+iId INT,
+PRIMARY KEY (vId, iId),
+FOREIGN KEY (vId) REFERENCES vendor(vId),
+FOREIGN KEY (iId) REFERENCES item(iId)
+);
 
-> CREATE TABLE store_item (
-> sId INT,
-> iId INT,
-> StockCount INT,
-> PRIMARY KEY (sId, iId),
-> FOREIGN KEY (iId) REFERENCES item(iId)
-> );
-
+CREATE TABLE store_item (
+sId INT,
+iId INT,
+StockCount INT,
+PRIMARY KEY (sId, iId),
+FOREIGN KEY (iId) REFERENCES item(iId)
+);
+```
 -- Additional tables for reports (example structure)
+```
+CREATE TABLE ItemSalesSummary (
+Iname VARCHAR(100),
+TotalRevenue DECIMAL(10, 2),
+TotalQuantitySold INT
+);
 
-> CREATE TABLE ItemSalesSummary (
-> Iname VARCHAR(100),
-> TotalRevenue DECIMAL(10, 2),
-> TotalQuantitySold INT
-> );
-
-> CREATE TABLE TopLoyalCustomers (
-> Cname VARCHAR(100),
-> LoyaltyScore DECIMAL(3, 1)
-> );
+CREATE TABLE TopLoyalCustomers (
+Cname VARCHAR(100),
+LoyaltyScore DECIMAL(3, 1)
+);
+```
 
 Update the **db_config** in **app.py** with your MySQL credentials if needed (default uses root with no password).
 
@@ -84,9 +85,9 @@ Update the **db_config** in **app.py** with your MySQL credentials if needed (de
 Navigate to the project directory in your terminal.
 
 Run the Flask app:
-'''
+```
 python app.py
-'''
+```
 
 Open your browser and go to **http://127.0.0.1:5000/** to access the application.
 
